@@ -1,0 +1,45 @@
+
+***********************************************************************************************************
+This document contains information about the descriptions and domain and range information about
+the properties for which the systems are evaluated
+
+
+
+Property: <http://dice-research.org/ontology/drugbank/hasCommonProducer>
+Domain: Drug
+Range: Drug
+Description: Indicates that the subject and object drugs are produced by a common producer.
+
+
+
+
+Property: <http://dice-research.org/ontology/drugbank/interactsWith>
+Domain: Drug
+Range: Drug
+Description: Indicates that the subject and object drugs interacts with each other. For example,
+INDOMETACIN and ETORICOXIB are drugs used as painkillers. These drugs can be combined for improved
+impact.
+
+
+Property: <http://dice-research.org/ontology/drugbank/hasSameState>
+Domain: Drug
+Range: Drug
+Description: Indicates that the subject and object drugs are available in the same state. These
+states can be solid, liquid etc.
+
+
+Property: <http://dice-research.org/ontology/drugbank/hasCommonIndication>
+Domain: Drug
+Range: Drug
+Description: Indicates that the subject and object drugs are used for treatment of similar diseases,
+injuries etc. For example, Streptokinase and Desirudin are used for the prevention of deep vein 
+thrombosis.
+
+Property: <http://dice-research.org/ontology/drugbank/hasIndication>
+Domain: Drug
+Range: Disease
+Description: Indicates that the subject drug is used for the treatment of object disease. For example,
+Phosphatidylserine is used to treat the symptoms of Alzheimer's disease.
+
+***********************************************************************************************************
+

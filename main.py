@@ -2,7 +2,7 @@ from rdflib import Graph,Literal, RDF,URIRef
 from rdflib.namespace import FOAF, XSD
 from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, precision_score, average_precision_score, recall_score
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
@@ -104,12 +104,12 @@ X_train=df1
 X_test=df4
 Y_train=df3['score']
 
-clf =RandomForestClassifier(random_state=0)
-clf.fit(X_train,Y_train)
-pred=clf.predict(X_test)
-res=pd.DataFrame(pred)
-
-print(classification_report(Y_train,pred))
+# clf =RandomForestClassifier(random_state=0)
+# clf.fit(X_train,Y_train)
+# pred=clf.predict(X_test)
+# res=pd.DataFrame(pred)
+#
+# print(classification_report(Y_train,pred))
 
 # clf2=svm.SVC()
 # clf2.fit(X_train,Y_train)
@@ -117,15 +117,17 @@ print(classification_report(Y_train,pred))
 # print(pred2)
 # print(classification_report(Y_train,pred2))
 tab=[]
+precision=[]
 for i in range(100):
     mlpc=MLPClassifier(hidden_layer_sizes=(11,11,11),max_iter=500)
     mlpc.fit(X_train,Y_train)
     pred_mlpc=mlpc.predict(X_test)
     tab.append(pred_mlpc)
     print(pred_mlpc)
-    print(classification_report(Y_train,pred_mlpc))
+    precision.append(average_precision_score(Y_train,pred_mlpc))
 
 df_pom_10=pd.DataFrame(tab)
 pom=df_pom_10.mean()
 print(pom)
 pom.to_csv("final_res.csv")
+print("Precision",sum(precision) / len(precision))

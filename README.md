@@ -24,9 +24,10 @@
 
 ## Technologies Used
 - Python3
-- scikit-learn library
-- numpy library
-- pandas library
+- RDFlib
+- scikit-learn
+- numpy
+- pandas
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)

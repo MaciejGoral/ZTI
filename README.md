@@ -25,7 +25,7 @@
 
 ## Technologies Used
 - Python3
-- sklearn library
+- scikit-learn library
 - numpy library
 - pandas library
 

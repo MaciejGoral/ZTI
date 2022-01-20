@@ -4,7 +4,6 @@
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
@@ -24,18 +23,9 @@
 
 
 ## Technologies Used
-- Python3
-- scikit-learn library
-- numpy library
-- pandas library
-
-
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)

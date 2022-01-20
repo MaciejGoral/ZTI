@@ -82,6 +82,6 @@ To do:
 
 
 ## Acknowledgements
-- Mr.Bąk please give us 3.0
+- Dr.Bąk please give us (at least) 3.0
 - Thank you for the opportunity to learn something new
-- Many thanks to... Mr. Bąk
+- Many thanks to... Dr.Bąk

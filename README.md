@@ -3,21 +3,28 @@
 
 ## Table of Contents
 * [General Info](#general-information)
+* [Introduction](#introduction)
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
 <!-- * [License](#license) -->
 
 
+## Introduction
+The International Semantic Web Conference, to be held in Auckland in late October 2019, hosts an annual challenge that aims to promote the use of innovative and new approaches to creation and use of the Semantic Web. This year’s challenge will focus on knowledge graphs. Both public and privately owned, knowledge graphs are currently among the most prominent implementations of Semantic Web technologies. This year’s challenge is centered on validation of factual information in a newly generated Knowledge graph. The challenge is divided into two tasks:
+
+* Task One: Fact Validation. Given a statement about an entity, e.g., the indication of a drug, participants are expected to provide an assessment about the correctness of the statement.
+* Task Two: Fact Validation at Scale. In this task the participating systems will be evaluated for their scalability including runtime measurements and their ability to handle parallel requests.
+
+Participants may choose to participate in one or both tasks. For both tasks, users may use a portion of the knowledge graph for training. The participants can make use of structured and unstructured information from Internet sources for validating facts. The evaluation of participating systems will be carried out on the testing portion of the Knowledge Graph owned by the organizers of the challenge.
+
+
 ## General Information
-- Provide general information about your project here.
+- 
 - What problem does it (intend to) solve?
 - What is the purpose of your project?
-- Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
@@ -65,9 +72,6 @@ Give credit here.
 - This project was based on [this tutorial](https://www.example.com).
 - Many thanks to...
 
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
 
 
 <!-- Optional -->

@@ -1,0 +1,9 @@
+rdflib
+rdflib.namespace
+sklearn
+sklearn.ensemble
+sklearn.metrics
+sklearn.neural_network
+sklearn.preprocessing
+numpy
+pandas

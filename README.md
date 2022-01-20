@@ -34,7 +34,7 @@ All requirements are placed in the requirements.txt file in the main repository 
 
 To install, use the command:
 
-'pip install -r requirements.txt' 
+`pip install -r requirements.txt`
 
 
 ## Usage

@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="bb3b3bb0-d9a6-4aeb-beab-9e00881e014e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWC_2019_Test.nt" beforeDir="false" afterPath="$PROJECT_DIR$/SWC_2019_Test.nt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_res.csv" beforeDir="false" afterPath="$PROJECT_DIR$/final_res.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_en.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_en.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_en.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train_en.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

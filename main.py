@@ -1,8 +1,5 @@
-from rdflib import Graph,Literal, RDF,URIRef
-from rdflib.namespace import FOAF, XSD
-from sklearn import svm
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, precision_score, average_precision_score, recall_score
+from rdflib import Graph,URIRef
+from sklearn.metrics import average_precision_score
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
@@ -13,13 +10,11 @@ def train_file():
     tab=[]
 
     for index,(sub,pred,obj) in enumerate(g):
-        #print(sub,pred,obj)
         tab.append((sub,pred,obj))
     tab=sorted(tab, key=lambda x: x[0])
     statements={}
     for (sub,pred,obj) in tab:
         if pred==(URIRef("http://swc2017.aksw.org/hasTruthValue")):
-            # print(sub,obj)
             statements[sub]={}
             statements[sub]["score"]=float(obj)
 
@@ -38,16 +33,14 @@ def train_file():
 
 def test_file():
     g = Graph()
-    g.parse("SWC_2019_Train.nt", format="turtle")
+    g.parse("SWC_2019_Test.nt", format="turtle")
     tab = []
     for index, (sub, pred, obj) in enumerate(g):
-        # print(sub,pred,obj)
         tab.append((sub, pred, obj))
     tab = sorted(tab, key=lambda x: x[0])
     statements = {}
     for (sub, pred, obj) in tab:
         if obj == (URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement")):
-            # print(sub,obj)
             statements[sub] = {}
 
     for (s, p, o) in tab:
@@ -58,33 +51,31 @@ def test_file():
         elif p == (URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#object")):
             statements[s]["object"] = o
     listp = []
+    listk=[]
     for k, v in statements.items():
+        listk.append(k)
         listp.append(v)
     df = pd.DataFrame(listp)
     df.to_csv('test.csv')
+    df2=pd.DataFrame(listk)
+    df2.to_csv('facts.csv')
 
-# train_file()
-# test_file()
+train_file()
+test_file()
 
 df_train=pd.read_csv("train.csv")
 df_test=pd.read_csv("test.csv")
 
-# df_tr_sc=df_train['score']
-# df_tr_p=df_train['predicate']
-# df_tr_sub=df_train['subject']
-# df_tr_ob=df_train['object']
-
-# df_train_1=df_train.drop('score',axis=1)
-# df_test_1=df_test.rename(columns={"subject": "sub", "predicate": "pred","object":"obj"})
-# result = pd.concat([df_train_1, df_test_1], axis=1, join='inner')
-# result=result.drop('Unnamed: 0',axis=1)
-# result.to_csv("result.csv")
-# le = LabelEncoder()
-# le.fit(np.unique(result.astype(str)))
-# X = np.array([le.transform(samp.astype(str)) for samp in result.values])
-# print(X)
-# df1=pd.DataFrame(X,columns=["predicate","subject","object","sub","pred","obj"])
-# df1.to_csv("result.csv")
+df_train_1=df_train.drop('score',axis=1)
+df_test_1=df_test.rename(columns={"subject": "sub", "predicate": "pred","object":"obj"})
+result = pd.concat([df_train_1, df_test_1], axis=1, join='inner')
+result=result.drop('Unnamed: 0',axis=1)
+result.to_csv("result.csv")
+le = LabelEncoder()
+le.fit(np.unique(result.astype(str)))
+X = np.array([le.transform(samp.astype(str)) for samp in result.values])
+df1=pd.DataFrame(X,columns=["predicate","subject","object","sub","pred","obj"])
+df1.to_csv("result.csv")
 df_fin=pd.read_csv("result.csv")
 df1 = df_fin[['predicate', 'subject','object']]
 df2 = df_fin[['sub', 'pred','obj']]
@@ -127,7 +118,11 @@ for i in range(100):
     precision.append(average_precision_score(Y_train,pred_mlpc))
 
 df_pom_10=pd.DataFrame(tab)
+df_pom_11=pd.read_csv("facts.csv")
 pom=df_pom_10.mean()
 print(pom)
-pom.to_csv("final_res.csv")
+df_pom_12=pd.concat([df_pom_11, pom], axis=1, join='inner')
+df_pom_12=df_pom_12.drop('Unnamed: 0',axis=1)
+df_pom_12 = df_pom_12.set_axis([ 'statement', 'predicted_score'], axis=1, inplace=False)
+df_pom_12.to_csv("final_res.csv")
 print("Precision",sum(precision) / len(precision))

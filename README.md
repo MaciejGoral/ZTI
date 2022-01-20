@@ -1,5 +1,5 @@
-# Project Name
-> Semantic Web Challenge 2019 (Task 1 – Fact Validation)
+# Semantic Web Challenge 2019 (Task 1 – Fact Validation)
+> This is a machine learning algorithm that takes RDF triples as input and returns a trust score to evaluate the truth of the statement. 
 
 ## Table of Contents
 * [General Info](#general-information)

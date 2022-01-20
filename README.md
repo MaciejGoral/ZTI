@@ -22,7 +22,8 @@ Participants may choose to participate in one or both tasks. For both tasks, use
 
 
 ## General Information
-* Task One: Fact Validation: 
+Task One: Fact Validation: 
+
 The task is to validate triple statements i.e., to check if a given property holds for the subject and object entity. For this task, participants will create an algorithm that takes as input a given triple and returns a trust score. The challenge participants are expected to provide a trust score for each of the statements (i.e., a numerical value between 0 and 1), where 0 means that they are sure that the statement is false and 1 means that they are sure the statement is true. As mentioned above, to facilitate training, the participants will be provided with the training part of the dataset consisting of positive and negative statements. The positive and negative statements are labeled with trust scores 1 and 0, respectively. An example graph of an input triple in the training set is as follows:
 ```
 <http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .

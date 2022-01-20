@@ -70,18 +70,6 @@ To run project simply enter this command while in repo root folder:
 Project is:  _complete_.
 
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
 ## Acknowledgements
 - Dr.Bąk please give us (at least) 3.0
 - Thank you for the opportunity to learn something new

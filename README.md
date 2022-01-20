@@ -38,14 +38,13 @@ To install, use the command:
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+To run project simply enter this command while in repo root folder:
 
-`write-your-code-here`
+`python main.py`
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is:  _complete_.
 
 
 ## Room for Improvement

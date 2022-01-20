@@ -30,9 +30,10 @@
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+All requirements are placed in the requirements.txt file in the main repository folder.
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+To install, use the command:
+pip install -r requirements.txt 
 
 
 ## Usage

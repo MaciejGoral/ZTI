@@ -22,10 +22,22 @@ Participants may choose to participate in one or both tasks. For both tasks, use
 
 
 ## General Information
-- 
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+* Task One: Fact Validation: 
+The task is to validate triple statements i.e., to check if a given property holds for the subject and object entity. For this task, participants will create an algorithm that takes as input a given triple and returns a trust score. The challenge participants are expected to provide a trust score for each of the statements (i.e., a numerical value between 0 and 1), where 0 means that they are sure that the statement is false and 1 means that they are sure the statement is true. As mentioned above, to facilitate training, the participants will be provided with the training part of the dataset consisting of positive and negative statements. The positive and negative statements are labeled with trust scores 1 and 0, respectively. An example graph of an input triple in the training set is as follows:
+`<http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB00001> .
+<http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/interactsWith> .
+<http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB09075> .
+<http://dice-research.org/ns/drugbank#drug-DB00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> "Lepirudin"@en .                                                           
+<http://dice-research.org/ns/drugbank#drug-DB09075> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> "Edoxaban"@en .                                                           
+<http://swc2019.dice-research.org/task/dataset/s-00001> <http://swc2017.aksw.org/hasTruthValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .`
+Note that, the statements in the training set are labeled with trust scores 0 or 1 using the property <http://swc2017.aksw.org/hasTruthValue>. It is up to the participants to further split the training set into training and validation sets accordingly. The following properties will be used in scoring the systems:
+ - http://dice-research.org/ontology/drugbank/interactsWith
+ - http://dice-research.org/ontology/drugbank/hasCommonIndication
+ - http://dice-research.org/ontology/drugbank/hasSameState
+ - http://dice-research.org/ontology/drugbank/hasIndication
+ - http://dice-research.org/ontology/drugbank/hasCommonProducer
+The domain and range information and the descriptions of the above mentioned properties will be made available with the training set.
 
 
 ## Technologies Used

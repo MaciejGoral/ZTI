@@ -39,6 +39,7 @@ Note that, the statements in the training set are labeled with trust scores 0 or
  - http://dice-research.org/ontology/drugbank/hasSameState
  - http://dice-research.org/ontology/drugbank/hasIndication
  - http://dice-research.org/ontology/drugbank/hasCommonProducer
+
 The domain and range information and the descriptions of the above mentioned properties will be made available with the training set.
 
 

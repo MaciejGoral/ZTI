@@ -33,6 +33,7 @@
 All requirements are placed in the requirements.txt file in the main repository folder.
 
 To install, use the command:
+
 pip install -r requirements.txt 
 
 

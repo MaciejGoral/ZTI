@@ -4,7 +4,6 @@
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -28,10 +27,6 @@
 - scikit-learn
 - numpy
 - pandas
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Setup

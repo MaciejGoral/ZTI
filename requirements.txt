@@ -1,0 +1,4 @@
+rdflib
+sklearn
+numpy
+pandas

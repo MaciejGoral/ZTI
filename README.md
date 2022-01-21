@@ -72,6 +72,5 @@ Project is:  _complete_.
 
 
 ## Acknowledgements
-- Dr.Bąk please give us (at least) 3.0
 - Thank you for the opportunity to learn something new
 - Many thanks to... Dr.Bąk

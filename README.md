@@ -56,7 +56,8 @@ The domain and range information and the descriptions of the above mentioned pro
 ## Datasets
 The algorithm works on two data sets, training and test. Both datasets contain statements about drugs and diseases.  The training set includes RDF triples with a 0/1 rating to determine whether the statement is true. 
 
-`<http://swc2019.dice-research.org/task/dataset/s-03755> <http://swc2017.aksw.org/hasTruthValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+```
+<http://swc2019.dice-research.org/task/dataset/s-03755> <http://swc2017.aksw.org/hasTruthValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB02100> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/hasCommonProducer> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB07860> .
@@ -70,11 +71,13 @@ The algorithm works on two data sets, training and test. Both datasets contain s
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB13879> .
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/hasCommonProducer> .
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB13878> .
-<http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .`
+<http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+```
 
 The training set is similar except that it does not include the trust score.
 
-`<http://swc2019.dice-research.org/task/dataset/s-03755> <http://swc2017.aksw.org/hasTruthValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+```
+<http://swc2019.dice-research.org/task/dataset/s-03755> <http://swc2017.aksw.org/hasTruthValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB02100> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/hasCommonProducer> .
 <http://swc2019.dice-research.org/task/dataset/s-03755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB07860> .
@@ -88,7 +91,8 @@ The training set is similar except that it does not include the trust score.
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB13879> .
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/hasCommonProducer> .
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB13878> .
-<http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .`
+<http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+```
 
 
 

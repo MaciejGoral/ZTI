@@ -7,6 +7,7 @@
 * [Introduction](#introduction)
 * [Technologies Used](#technologies-used)
 * [Datasets](#datasets)
+* [Algorithm](#algorithm)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -94,6 +95,8 @@ The training set is similar except that it does not include the trust score.
 <http://swc2019.dice-research.org/task/dataset/s-02059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
 ```
 
+## Algorithm
+First, SWC_2019_Train.nt (turtle format) is loaded as a graph. We iterate through the graph and create a dataframe with statement, subject, object, predicate and score columns. The output file looks like train.csv (column1 was added when converting to dataframe)
 
 
 

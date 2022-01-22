@@ -100,6 +100,27 @@ First, SWC_2019_Train.nt (turtle format) is loaded as a graph. We iterate throug
 
 ![Screenshot](./pics/pic1.jpg)
 
+Then the same for the training session, only without the score column. (file SWC_2019_Test.nt) 
+
+![Screenshot](./pics/pic2.jpg)
+
+This function also creates the facts.csv file with the statements, because they will be needed later 
+
+![Screenshot](./pics/pic3.jpg)
+
+To be able to use sklearn, this data has to be encoded to ints, so we load train.csv and test.csv files, combine them (so that the encoding is the same for both) and encode with LabelEncoder(tu jak znajdziesz to możesz dokładnie napisać co to za enkoder). Then we split it back into 2 files test_en.csv and train_en.csv
+
+![Screenshot](./pics/pic4.jpg)
+
+![Screenshot](./pics/pic5.jpg)
+
+As we already have it, we divide it into a training and testing set. We use MLPClassifier (tu możesz napisać jeszcze co to dokładnie jest MLPClassifier) to predict the score, but we only get 0 or 1. So we do it 100 times and calculate the average. Then the result will come out from 0 to 1 with two decimal places. We also take the precision from each iteration and finally calculate the average precision. The average precision will come out about 0.54, which is as much as in 2019-HonCamus-FactValidationAlgorithmbyCombinationofKnowledgeGraphandNeuralNetwork.pdf
+Finally, we take these results with two decimal places and combine them with the facts.csv file and we get something like the final_res.csv file
+
+![Screenshot](./pics/pic6.jpg)
+
+Score means how sure we are that the statement is real. 
+
 
 ## Setup
 All requirements are placed in the requirements.txt file in the main repository folder.

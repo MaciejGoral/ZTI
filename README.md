@@ -98,6 +98,7 @@ The training set is similar except that it does not include the trust score.
 ## Algorithm
 First, SWC_2019_Train.nt (turtle format) is loaded as a graph. We iterate through the graph and create a dataframe with statement, subject, object, predicate and score columns. The output file looks like train.csv (column1 was added when converting to dataframe)
 
+![Screenshot](pics/pic1.jpeg)
 
 
 ## Setup

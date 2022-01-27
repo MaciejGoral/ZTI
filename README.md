@@ -30,7 +30,6 @@ Task One: Fact Validation:
 The task is to validate triple statements i.e., to check if a given property holds for the subject and object entity. For this task, participants will create an algorithm that takes as input a given triple and returns a trust score. The challenge participants are expected to provide a trust score for each of the statements (i.e., a numerical value between 0 and 1), where 0 means that they are sure that the statement is false and 1 means that they are sure the statement is true. As mentioned above, to facilitate training, the participants will be provided with the training part of the dataset consisting of positive and negative statements. The positive and negative statements are labeled with trust scores 1 and 0, respectively. An example graph of an input triple in the training set is as follows:
 ```
 <http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
-<http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://dice-research.org/ns/drugbank#drug-DB00001> .
 <http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://dice-research.org/ontology/drugbank/interactsWith> .
 <http://swc2019.dice-research.org/task/dataset/s-00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://dice-research.org/ns/drugbank#drug-DB09075> .
 <http://dice-research.org/ns/drugbank#drug-DB00001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> "Lepirudin"@en .                                                           
@@ -108,13 +107,13 @@ This function also creates the facts.csv file with the statements, because they 
 
 ![Screenshot](./pics/pic3.jpg)
 
-To be able to use sklearn, this data has to be encoded to ints, so we load train.csv and test.csv files, combine them (so that the encoding is the same for both) and encode with LabelEncoder(tu jak znajdziesz to możesz dokładnie napisać co to za enkoder). Then we split it back into 2 files test_en.csv and train_en.csv
+To be able to use sklearn, this data has to be encoded to ints, so we load train.csv and test.csv files, combine them (so that the encoding is the same for both) and encode with LabelEncoder(it's a utility class to help normalize labels such that they contain only values between 0 and n_classes-1). Then we split it back into 2 files test_en.csv and train_en.csv
 
 ![Screenshot](./pics/pic4.jpg)
 
 ![Screenshot](./pics/pic5.jpg)
 
-As we already have it, we divide it into a training and testing set. We use MLPClassifier (tu możesz napisać jeszcze co to dokładnie jest MLPClassifier) to predict the score, but we only get 0 or 1. So we do it 100 times and calculate the average. Then the result will come out from 0 to 1 with two decimal places. We also take the precision from each iteration and finally calculate the average precision. The average precision will come out about 0.54, which is as much as in 2019-HonCamus-FactValidationAlgorithmbyCombinationofKnowledgeGraphandNeuralNetwork.pdf
+As we already have it, we divide it into a training and testing set. We use MLPClassifier (Multi-layer Perceptron classifier relies on an underlying Neural Network to perform the task of classification) to predict the score, but we only get 0 or 1. So we do it 100 times and calculate the average. Then the result will come out from 0 to 1 with two decimal places. We also take the precision from each iteration and finally calculate the average precision. The average precision will come out about 0.54, which is as much as in 2019-HonCamus-FactValidationAlgorithmbyCombinationofKnowledgeGraphandNeuralNetwork.pdf
 Finally, we take these results with two decimal places and combine them with the facts.csv file and we get something like the final_res.csv file
 
 ![Screenshot](./pics/pic6.jpg)
